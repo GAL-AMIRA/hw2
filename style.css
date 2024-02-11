@@ -1,0 +1,307 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--primary-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.navbar li {
+  list-style: none;
+}
+.navbar ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+}
+#dark-mode {
+  cursor: pointer;
+}
+#dark-mode,
+.navbar a {
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 1vw;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+}
+#dark-mode:hover,
+.navbar a:hover {
+  background-color: var(--second-color);
+}
+.navbar {
+  background-color: var(--second-color);
+  width: 100%;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+}
+.navbar .links-social-media {
+  display: flex;
+  gap: 2rem;
+}
+.toggle-button li {
+  cursor: pointer;
+  display: none;
+}
+
+:root {
+  --primary-color: rgb(195, 195, 195);
+  --second-color: rgb(0, 0, 0);
+  --thered-color: black;
+}
+.dark-theme {
+  --primary-color: rgb(0, 0, 0);
+  --second-color: rgb(195, 195, 195);
+  --thered-color: rgba(92, 77, 77, 0.248);
+}
+
+H1 {
+  padding-top: 10px;
+  font-size: 7vw;
+  text-align: center;
+  text-shadow: 15px 15px rgb(163, 166, 166);
+  color: var(--thered-color);
+}
+
+h2 {
+  font-size: 3vw;
+  text-align: center;
+  text-shadow: 4px 4px rgb(163, 166, 166);
+  color: var(--thered-color);
+}
+.HomePage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 970px;
+  text-align: left;
+  padding: 0% 8%;
+}
+.AboutMe {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  text-align: right;
+  padding: 5% 10%;
+  flex-direction: row-reverse; /* זה ישנה את הסדר */
+}
+.AboutMe-content,
+.HomePage-content {
+  max-width: 50%;
+}
+
+.about-image img,
+.profile-image img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  border-radius: 50%;
+  border: 3px solid black;
+  background-color: aqua;
+  box-shadow: 0 0 60px 60px rgb(119, 124, 124);
+}
+.AboutMe img {
+  align-items: end;
+}
+.AboutMe-content h1 {
+  display: flex;
+  text-align: center;
+  font-size: 100px;
+  color: var(--thered-color);
+}
+.HomePage-content h1 {
+  font-size: 100px;
+  display: flex;
+  color: var(--thered-color);
+}
+
+.AboutMe-content p,
+.HomePage-content p {
+  font-size: 40px;
+  color: var(--second-color);
+}
+.subtitle {
+  font-weight: lighter;
+}
+
+.skills-section {
+  display: flex; /* קובע את המבנה ל-flexbox */
+  align-items: center; /* מיישר את התוכן במרכז אנכית */
+  justify-content: space-between; /* מפריד בין התוכן לקצוות האזור */
+  margin: 20px;
+  padding: 20px;
+}
+
+.skills-section h2:hover {
+  color: #818689;
+  text-shadow: 12px 20px 12px #494a4a;
+}
+.skills-section h2 {
+  font-family: "Arial", sans-serif;
+  text-shadow: 6px 10px 6px #525356;
+  color: var(--second-color);
+  font-size: 4vw;
+  text-align: center;
+}
+
+.skills-section ul {
+  list-style-type: none;
+  display: block;
+  width: auto;
+  padding: 5%;
+}
+
+.skills-section ul li {
+  background-color: #f8f8f8;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+#skills-image img {
+  display: flex;
+  width: 30vw;
+  height: 40vw;
+  max-width: 500px;
+  max-height: 300px;
+  border-radius: 10%;
+  background-color: aqua;
+  box-shadow: 0px 0px 40px 20px rgb(119, 124, 124);
+  border: 3px solid black;
+  margin: 5%;
+}
+.cards-section {
+  margin: 0;
+  padding: 6%;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 300px;
+  height: 320px;
+  background-color: #ffffff66;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 6px 6px rgb(119, 124, 124);
+}
+.card:hover {
+  background-color: #525356;
+}
+.card img {
+  width: 100%;
+  max-height: 50%;
+  object-fit: cover;
+}
+
+.card p {
+  padding: 15px;
+  font-size: 14px;
+  color: var(--second-color);
+}
+.toggle-button {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--second-color);
+  border-radius: 10px;
+}
+@media (max-width: 700px) {
+  .toggle-button {
+    display: flex;
+  }
+  .toggle-button:hover {
+    background-color: #808289;
+  }
+  .navbar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 40%;
+  }
+
+  .navbar ul {
+    width: 100%;
+    flex-direction: column;
+    height: 40%;
+  }
+  .navbar li a {
+    padding: 0.5rem 1rem;
+  }
+  .navbar.active {
+    display: flex;
+  }
+  .HomePage-content h1,
+  .AboutMe-content h1 {
+    font-size: 12vw;
+    display: flex;
+  }
+  .AboutMe-content p,
+  .HomePage-content p {
+    font-size: 5.5vw;
+  }
+  .HomePage,
+  .AboutMe {
+    height: 770px;
+  }
+}
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: auto;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+button {
+  padding: 10px;
+  background-color: rgb(118, 112, 119);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkblue;
+}
