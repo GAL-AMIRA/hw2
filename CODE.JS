@@ -5,20 +5,25 @@ toggleButton.addEventListener("click", () => {
   navbarLinks.classList.toggle("active");
 });
 
-var darkmode = document.getElementById("dark-mode");
-darkmode.onclick = function () {
+var darkMode = document.getElementById("dark-mode");
+darkMode.addEventListener("click", function () {
   document.body.classList.toggle("dark-theme");
-};
-document
-  .getElementById("contactForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault(); // מונע את השליחה הרגילה של הטופס
+  localStorage.setItem(
+    "darkTheme",
+    document.body.classList.contains("dark-theme").toString()
+  );
+});
 
-    // בצע כאן את הקריאה ל-API או את הטיפול בנתוני הטופס
+document.addEventListener("DOMContentLoaded", () => {
+  if (localStorage.getItem("darkTheme") === "true") {
+    document.body.classList.add("dark-theme");
+  }
+});
 
-    // הצגת הודעת התודה
+var contactForm = document.getElementById("contactForm");
+if (contactForm) {
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
     document.getElementById("thankYouMessage").style.display = "block";
-
-    // אפשרות להחביא את הטופס או לנקות אותו כאן, לדוגמה:
-    // document.getElementById("contactForm").reset();
   });
+}
